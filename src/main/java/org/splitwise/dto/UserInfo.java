@@ -1,24 +1,13 @@
-package org.splitwise.entitites;
+package org.splitwise.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-
-@Entity
-public class User extends BaseEntity {
-
-    @Id
-    private int id;
+public class UserInfo extends BaseDTO {
     private String userName;
     private String firstName;
     private String lastName;
     private String emailId;
     private String contact;
 
-    public User() {
-        super();
-    }
-
-    public User(int id, String userName, String firstName, String lastName, String emailId, String contact) {
+    public UserInfo(int id, String userName, String firstName, String lastName, String emailId, String contact) {
         super(id);
         this.userName = userName;
         this.firstName = firstName;
@@ -27,12 +16,8 @@ public class User extends BaseEntity {
         this.contact = contact;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public UserInfo() {
+        super();
     }
 
     public String getFirstName() {
